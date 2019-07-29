@@ -99,7 +99,7 @@ class MiniTFTFeatherWing:
         """
         Set the backlight duty cycle
         """
-        self._backlight.duty_cycle = int(255 * min(max(brightness, 0.0), 1.0))brightness
+        self._backlight.duty_cycle = 255 - int(255 * min(max(brightness, 0.0), 1.0))
 
     @property
     def buttons(self):
